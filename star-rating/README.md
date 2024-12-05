@@ -12,3 +12,9 @@ Create a star rating widget that allows users to select a rating value.
 The star icons, both empty and filled, are provided to you as SVGs.
 
 A StarRating.js skeleton component has been created for you. You are free to decide the props of <StarRating />.
+
+## Reviews
+1. 了解題目意思，傳入的 props 不是 `defaultRating` 而是 `rating`，且透過傳入 `onChange` 更改 `rating` 的值而不是直接寫在元件內部。 
+2. 保持 `StarIcon` 單純，event handler 相關操作保留在 `StarRating` 元件內部。
+3. event handler 不要使用 closure 以保持函式的單純。
+4. `tempRating` 使用 `null` 而不是 `0` 以強調狀態。
