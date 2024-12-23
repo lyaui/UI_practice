@@ -17,18 +17,22 @@ const DegreeBox = ({ label, onChange, value }) => {
   );
 };
 
-export default function TempConverter() {
+export default function App() {
   const [celsius, setCelsius] = useState('');
   const [fahrenheit, setFahrenheit] = useState('');
 
+  const formatDegree = (n) => {
+    return +n.toFixed(4);
+  };
+
   const handleCInputChange = (_c) => {
     setCelsius(_c);
-    setFahrenheit(_c * 1.8 + 32);
+    setFahrenheit(formatDegree(_c * 1.8 + 32));
   };
 
   const handleFInputChange = (_f) => {
     setFahrenheit(_f);
-    setCelsius((_f - 32) / 1.8);
+    setCelsius(formatDegree((_f - 32) / 1.8));
   };
 
   return (
