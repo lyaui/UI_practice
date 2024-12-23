@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+}
+
+.wedge {
+  display: flex;
+  gap: 10px;
+}
+
+.degree_container {
+  text-align: center;
+}
+
+.degree_input {
+  height: 24px;
+}
